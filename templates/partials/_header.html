@@ -1,0 +1,23 @@
+{% load static %}
+
+<header class="header">
+  <h1 id="main-title"><a href="{% url 'home' %}">Coding Journal</a></h1>
+  <div class="grey-line"></div>
+  <p class="subtitle">My way up to become a Full Stack Developer</p>
+  <div class="grey-line"></div>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li class="nav-link"
+          {% if '/' == request.path %}
+          class="current"
+          {% endif %} >
+          <a href="{% url 'home' %}" >HOME</a></li>
+      <li class="nav-link"
+      {% if 'about' in request.path %}
+          class="current"
+          {% endif %}
+      ><a href="{% url 'about' %}">ABOUT</a></li>
+      <li class="nav-link"><a href="#">PORTFOLIO</a></li>
+    </ul>
+  </nav>
+</header>

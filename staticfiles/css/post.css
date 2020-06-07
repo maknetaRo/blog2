@@ -1,0 +1,68 @@
+@import "./main.css";
+@import "./blog.css";
+
+/* Post */
+.card {
+  margin-bottom: 1.5rem;
+}
+
+/* Bio Info */
+
+.post-bio-info {
+  display: flex;
+  flex-direction: row;
+  padding: 5%;
+  border-top: 1px dotted var(--list-border-color);
+  align-items: center;
+  height: 150px;
+  line-height: 1.5;
+}
+.written-by {
+  font-style: oblique;
+}
+.author-name {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#bio-photo {
+  width: 100px;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+  min-width: 80px;
+}
+
+/* Similar posts */
+.similar-posts h3 {
+  color: var(--side-color);
+}
+
+.similar-row {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.figure {
+  width: 33%;
+}
+
+.fig {
+  padding: 0.25rem 0;
+  text-align: center;
+}
+
+.figure a {
+  outline: none;
+}
+
+.similar-img {
+  width: 100%;
+  height: auto;
+  border: 8px solid transparent;
+  border-radius: 15px;
+}
+
+.similar-img:hover {
+  transform: scale(1.05);
+}
