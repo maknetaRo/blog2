@@ -2,6 +2,8 @@ from django.db import models
 from django.conf import settings
 from django.urls import reverse
 from django.utils.text import slugify
+from taggit.managers import TaggableManager
+
 
 STATUS = (
     (0, "Draft"),
@@ -20,8 +22,13 @@ class Post(models.Model):
     updated = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
+    tags = TaggableManager()
+
     class Meta:
         ordering = ("-created_on",)
+
+    def __str__(self):
+        return self.title
 
     def get_absoulte_url(self):
         kwargs = {"slug": self.slug}

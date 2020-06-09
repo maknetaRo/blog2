@@ -1,3 +1,69 @@
-{% extends 'base.html' %} {% block content %}
-<h1>About Page</h1>
+{% extends 'base.html' %} 
+{% load static %}
+
+<!-- content -->
+{% block content %}
+<article id="about-article" class="card">
+    <h2 class="about-title">About the author of the blog</h2>
+    <p class="intro description">
+      My name's Magdalena Rosłaniec but I like my internet nickname: makneta.
+      I'm a teacher, mother and self-taught developer who wants to change
+      her career into programming.
+    </p>
+    <div class="about-picture">
+      <img
+        src="{% static 'img/spring-lake.jpg' %}"
+        alt="spring lake"
+        class="about-img"
+      />
+    </div>
+    <p class="description">
+      I live in a medium size town in the north-east Poland. I love my small
+      fatherland, it's a peaceful place, full of lakes and forests, where I
+      enjoy running, nordic walking and riding a bike in my free time.
+    </p>
+    <div class="about-picture">
+      <img
+        src="{% static 'img/zalew-trees.jpg' %}"
+        alt="spring lake"
+        class="about-img"
+      />
+    </div>
+    <p class="description">
+      I started my adventure with programming in September 2017 and since
+      then I've been slowly but steadily learning Python and Django. I've
+      learnt also a bit of SQL, JavaScript and C++ but Python is deeply in
+      my heart. My other passion is art, so I sometimes "draw" in CSS for
+      pleasure.
+    </p>
+    
+    <p class="description">
+      I'm taking part in a #100DaysOfCode movement and everyday teach myself
+      something new. I'm a driven by these words:
+      <br> <br>
+      <blockquote>
+        “Don't wish it was easier
+        wish you were better. Don't wish for less problems wish for more
+        skills. Don't wish for less challenge wish for more wisdom”
+        <em>Jin Rohn</em> 
+    </blockquote> 
+      
+    </p>
+    <div class="about-picture">
+        <img
+          src="{% static 'img/lake_krzywe.jpeg' %}"
+          alt="spring lake"
+          class="about-img"
+        />
+    </div>
+    <h2 class="about-title">About this blog</h2>
+    <p class="intro description">
+        This blog is my first live application written in Django. The code is not finished. I'm going to add new features and write about it. So Python and Django will be the main topics of this website.
+    </p>
+    <br>
+    <p class="description">
+        By no means I'm an expert. I'm still learning and as the title says it's my coding journal. I'm going to write about things I'm working on, about things I've just learnt or want to try. If you think that my solutions aren't good, don't hesitate to let me know. If you like my posts, don't hesitate to let me know, too.
+    </p>
+
+  </article>
 {% endblock %}

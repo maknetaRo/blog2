@@ -13,8 +13,8 @@
   --side-bg-color: white;
   --text-color: rgb(0, 0, 0);
   --side-color: rgba(0, 0, 0, 0.7);
-  --btn-bg-color: rgba(96, 96, 96, 0.8);
-  --btn-bg-hover-color: rgb(96, 96, 96);
+  --btn-bg-color: #93b876;
+  --btn-bg-hover-color: #6b934c;
   --date-color: rgba(0, 0, 0, 0.5);
   --list-border-color: #e6e6e6;
   --box-shadow-color: rgba(0, 0, 0, 0.3);
@@ -31,7 +31,9 @@ h4,
 p {
   margin-top: 0;
 }
-h1,
+h1 {
+  color: var(--btn-bg-color);
+}
 h2,
 h3,
 h4 {

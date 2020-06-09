@@ -4,7 +4,11 @@
 {% block content %}
 
 <!-- logic -->
+<!-- {% if tags %}
+<h2>Posts tagged with <span>{{ tag.name }}</span></h2>
+{% endif %} -->
 
+<!-- posts -->
 {% for post in posts %}
 <article id="first-post" class="card">
   <div class="top-card" class="main-image">
@@ -20,6 +24,15 @@
         <a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a>
       </h2>
       <h4 class="date">{{ post.created_on|date:"M d, y" }}</h4>
+    </div>
+    <div class="tag-row">
+      <p class="tags">
+        Tags: {% for tag in post.tags.all %}
+        <a href="{% url 'tagged' tag.slug %}" title="" rel="category tag"
+          >{{ tag.name }}</a
+        >
+        {% endfor %}
+      </p>
     </div>
     <p class="short-desc">
       {{ post.text|safe|truncatewords:"30" }}

@@ -14,11 +14,28 @@
     <a href="{% url 'about' %}" class="read-bio">Read more</a>
   </figure>
 
-  <p>I've written {% total_posts %} posts so far.</p>
-  <div class="latest-posts-card">
-    <h3 id="featured-posts">Latest posts</h3>
-    <ul id="posts-list">
-      {% show_latest_posts 5 %}
-    </ul>
+  <div class="widget widget_popular">
+    <p>I've written {% total_posts %} posts so far.</p>
+    <div class="latest-posts-card">
+      <h3 id="featured-posts">Latest posts</h3>
+      <ul id="posts-list">
+        {% show_latest_posts 5 %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="widget widget_tags">
+    <h3>Post Tags</h3>
+    <div class="tagcloud">
+      {% for tag in tags %}
+      <a
+        href="{% url 'tagged' tag.slug %}"
+        class="button-tag"
+        title=""
+        rel="category tag"
+        >{{ tag.name }}</a
+      >
+      {% endfor %}
+    </div>
   </div>
 </aside>

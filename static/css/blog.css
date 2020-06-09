@@ -45,17 +45,20 @@ header {
 .nav-links {
   display: flex;
   flex-direction: row;
+  /* flex-wrap: wrap;
+  line-height: 2.5; */
 }
-.nav-link {
+.nav-links li {
   line-height: 1.75;
   list-style: none;
+  border-bottom: 3px solid transparent;
 }
-.nav-link a {
+.nav-links li a {
   text-decoration: none;
-  padding-right: 2rem;
+  padding: 1rem;
 }
-.current {
-  background: var(--btn-bg-color);
+.nav-links li.current {
+  border-bottom: 3px solid var(--btn-bg-color);
 }
 aside {
   grid-area: aside;
@@ -63,10 +66,12 @@ aside {
 }
 #main-title {
   padding-bottom: 1rem;
+  color: var(--btn-bg-color);
 }
 
 #main-title a {
   text-decoration: none;
+  color: var(--btn-bg-color);
 }
 
 .grey-line {
@@ -204,10 +209,27 @@ main {
   padding: 0 1.5rem 2.5rem;
   line-height: 1.5;
 }
+.tag-row {
+  padding-left: 1.5rem;
+  padding-bottom: 2.5rem;
+  color: rgba(0, 0, 0, 0.6);
+}
 
+.tagcloud {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+}
 /* Buttons */
 
-.read-more {
+.button-tag {
+  margin-top: 1.25rem;
+}
+
+.read-more,
+.button-tag {
   display: inline-block;
   padding: 0.9rem 2rem;
   margin-left: 1.5rem;
@@ -217,13 +239,15 @@ main {
   border-radius: 5px;
 }
 
-a.read-more {
+a.read-more,
+a.button-tag {
   color: var(--side-bg-color);
   font-weight: 400;
   text-decoration: none;
 }
 
-.read-more:hover {
+.read-more:hover,
+.button-tag:hover {
   transform: scale(1.1);
   background: var(--btn-bg-hover-color);
 }

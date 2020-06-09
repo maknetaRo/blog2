@@ -7,17 +7,17 @@
   <div class="grey-line"></div>
   <nav class="navbar">
     <ul class="nav-links">
-      <li class="nav-link"
+      <li 
           {% if '/' == request.path %}
           class="current"
-          {% endif %} >
-          <a href="{% url 'post_list' %}" >HOME</a></li>
-      <li class="nav-link"
+          {% endif %}>
+          <a href="{% url 'post_list' %}">HOME</a></li>
+      <li 
       {% if 'about' in request.path %}
           class="current"
-          {% endif %}
-      ><a href="{% url 'about' %}">ABOUT</a></li>
-      <li class="nav-link"><a href="#">PORTFOLIO</a></li>
+          {% endif %}><a href="{% url 'about' %}">ABOUT</a></li>
+      <!-- <li ><a href="#">PORTFOLIO</a></li>
+      <li ><a href="#">CONTACT</a></li> -->
     </ul>
   </nav>
 </header>
