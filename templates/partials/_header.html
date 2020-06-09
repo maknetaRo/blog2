@@ -1,7 +1,7 @@
 {% load static %}
 
 <header class="header">
-  <h1 id="main-title"><a href="{% url 'home' %}">Coding Journal</a></h1>
+  <h1 id="main-title"><a href="{% url 'post_list' %}">Coding Journal</a></h1>
   <div class="grey-line"></div>
   <p class="subtitle">My way up to become a Full Stack Developer</p>
   <div class="grey-line"></div>
@@ -11,7 +11,7 @@
           {% if '/' == request.path %}
           class="current"
           {% endif %} >
-          <a href="{% url 'home' %}" >HOME</a></li>
+          <a href="{% url 'post_list' %}" >HOME</a></li>
       <li class="nav-link"
       {% if 'about' in request.path %}
           class="current"

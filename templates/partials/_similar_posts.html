@@ -1,0 +1,21 @@
+{% load static %}
+<section class="similar-posts">
+  <h3 class="similar">Similar posts</h3>
+  <div class="similar-row">
+    {% for post in similar_posts %}
+    <figure class="figure">
+      <a href="{{ post.get_absolute_url }}">
+        <img
+          src="{% if post.header_image %}{{ post.header_image.url }}{% endif %}"
+          alt=""
+          class="similar-img"
+        />
+        <figcaption class="fig">{{ post.title }}</figcaption>
+      </a>
+    </figure>
+    {% empty %} There are no similar posts. {% endfor %}
+  </div>
+</section>
+<section class="all-posts">
+  <a href="{% url 'post_list' %}" class="read-more">All posts</a>
+</section>

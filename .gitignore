@@ -1,0 +1,30 @@
+*.pot
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+.env
+db.sqlite3
+
+py37-venv
+
+pipenv
+
+.bash_profile
+secrets.txt
+docker-compose.yaml
+.env
+
+.idea/
+.vscode/

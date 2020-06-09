@@ -2,21 +2,33 @@
 
 <footer class="footer">
   <section class="photo-gallery">
-    <img src="img/hancza_river.jpg" alt="river" class="img-gallery" />
-    <img src="img/winter.jpg" alt="winter trees" class="img-gallery" />
-    <img src="img/suwalki_zalew.jpg" alt="lake" class="img-gallery" />
     <img
-      src="img/zalew-frost.jpg"
+      src="{% static 'img/hancza_river.jpg' %}"
+      alt="river"
+      class="img-gallery"
+    />
+    <img
+      src="{% static 'img/winter.jpg' %}"
+      alt="winter trees"
+      class="img-gallery"
+    />
+    <img
+      src="{% static 'img/suwalki_zalew.jpg' %}"
+      alt="lake"
+      class="img-gallery"
+    />
+    <img
+      src="{% static 'img/zalew-frost.jpg' %}"
       alt="lake on frosty morning"
       class="img-gallery"
     />
     <img
-      src="img/spring-lake.jpg"
+      src="{% static 'img/spring-lake.jpg' %}"
       alt="lake and spring trees"
       class="img-gallery"
     />
     <img
-      src="img/zalew-trees.jpg"
+      src="{% static 'img/zalew-trees.jpg' %}"
       alt="trees on the shore of the lake"
       class="img-gallery"
     />
@@ -24,17 +36,20 @@
   <section id="social-links">
     <ul class="social-links">
       <li class="twitter link">
-        <a href="https://twitter.com/makneta">
+        <a href="https://twitter.com/makneta" target="_blank">
           <i class="fa fa-twitter"></i>
         </a>
       </li>
       <li class="github link">
-        <a href="https://github.com/maknetaRo">
+        <a href="https://github.com/maknetaRo" target="_blank">
           <i class="fa fa-github-square"></i>
         </a>
       </li>
       <li class="youtube link">
-        <a href="https://www.youtube.com/channel/UC4LEVBWmYsZak-TzknTlDdw">
+        <a
+          href="https://www.youtube.com/channel/UC4LEVBWmYsZak-TzknTlDdw"
+          target="_blank"
+        >
           <i class="fa fa-youtube"></i>
         </a>
       </li>
@@ -60,8 +75,9 @@
     <div class="navigator">
       <h3>Navigator</h3>
       <ul class="nav-links">
-        <li class="nav-link"><a href="index.html">Home</a></li>
-        <li class="nav-link"><a href="about.html">About</a></li>
+        <li class="nav-link"><a href="{% url 'post_list' %}">Home</a></li>
+        <li class="nav-link"><a href="{% url 'about' %}">About</a></li>
+        <li class="nav-link"><a href="{% url 'about' %}">Portfolio</a></li>
       </ul>
     </div>
   </section>

@@ -1,0 +1,5 @@
+{% load blog_tags %} {% for post in latest_posts %}
+<li class="list">
+  <a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a>
+</li>
+{% endfor %}

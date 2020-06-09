@@ -169,16 +169,14 @@ main {
   padding: 0 1.5rem 1.5rem;
 }
 
-#first,
-#second,
-#third {
+.main-image {
   background-position: 50% 30%;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 5px 5px 0 0;
 }
 
-#first {
+/* #first {
   background-image: url("../img/cup-of-coffee.jpg");
 }
 
@@ -188,7 +186,7 @@ main {
 
 #third {
   background-image: url("../img/student.jpg");
-}
+} */
 
 .bottom-card {
   grid-area: bottom;

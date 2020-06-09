@@ -1,4 +1,4 @@
-{% load static %}
+{% load blog_tags %} {% load static %}
 
 <aside class="aside">
   <figure class="bio-card">
@@ -11,20 +11,14 @@
       Hi! I'm Makneta. Welcome to my blog. I'm an avid learner, Python / Django
       and CSS Art ethusiast.
     </figcaption>
-    <a href="about.html" class="read-bio">Read more</a>
+    <a href="{% url 'about' %}" class="read-bio">Read more</a>
   </figure>
+
+  <p>I've written {% total_posts %} posts so far.</p>
   <div class="latest-posts-card">
     <h3 id="featured-posts">Latest posts</h3>
     <ul id="posts-list">
-      <li class="list">
-        <a href="posts/post1.html">How to start a Django project</a>
-      </li>
-      <li class="list">
-        <a href="posts/post2.html">Active links in Django</a>
-      </li>
-      <li class="list">
-        <a href="posts/post3.html">First tests in my Django app </a>
-      </li>
+      {% show_latest_posts 5 %}
     </ul>
   </div>
 </aside>

@@ -1,17 +1,32 @@
+{% extends 'base.html' %} {% load static %}
+
+<!-- content -->
+{% block content %}
+
+<!-- logic -->
+
+{% for post in posts %}
 <article id="first-post" class="card">
-  <div class="top-card" id="first"></div>
+  <div class="top-card" class="main-image">
+    <img
+      class="image"
+      src="{% if post.header_image %}{{ post.header_image.url }}{% endif %}"
+      alt=""
+    />
+  </div>
   <div class="bottom-card">
     <div class="date-title-row">
-      <h2 class="post-title">How to start a Django project</h2>
-      <h4 class="date">March 28, 2020</h4>
+      <h2 class="post-title">
+        <a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a>
+      </h2>
+      <h4 class="date">{{ post.created_on|date:"M d, y" }}</h4>
     </div>
     <p class="short-desc">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-      adipisci, esse quaerat ducimus libero tempore itaque. Nulla in sunt
-      facilis nemo quos. Suscipit quam reiciendis officiis quibusdam? Velit,
-      minus? Libero. Dolor, amet atque, possimus dicta esse eos commodi incidunt
-      doloremque nihil officia tempora?
+      {{ post.text|safe|truncatewords:"30" }}
     </p>
-    <a class="read-more" href="posts/post1.html">Read more ...</a>
+    <a class="read-more" href="{% url 'post_detail' post.slug %}"
+      >Read more ...</a
+    >
   </div>
 </article>
+{% endfor %} {% endblock %}
